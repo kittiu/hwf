@@ -7,6 +7,22 @@ app_description = "HWF"
 app_email = "kittiu@gmail.com"
 app_license = "MIT"
 
+fixtures = [
+	{
+		"doctype": "Custom Field",
+		"filters": [
+			[
+				"name",
+				"in",
+				(
+					"Task-activities",
+                    "Purchase Order-employee",
+				),
+			]
+		],
+	}
+]
+
 # Includes in <head>
 # ------------------
 
@@ -30,6 +46,11 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+
+doctype_js = {
+	"Material Request": "public/js/material_request.js",
+}
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
