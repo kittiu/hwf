@@ -6,6 +6,7 @@ app_publisher = "Kitti U."
 app_description = "HWF"
 app_email = "kittiu@gmail.com"
 app_license = "MIT"
+required_apps = ["erpnext", "hrms"]
 
 fixtures = [
 	{
@@ -17,6 +18,7 @@ fixtures = [
 				(
 					"Task-activities",
                     "Purchase Order-employee",
+                    "Task-activities",
 				),
 			]
 		],
@@ -49,6 +51,10 @@ fixtures = [
 
 doctype_js = {
 	"Material Request": "public/js/material_request.js",
+	"Purchase Order": "public/js/purchase_order.js",
+	"Supplier Quotation": "public/js/supplier_quotation.js",
+	"Purchase Invoice": "public/js/purchase_invoice.js",
+	"Expense Claim": "public/js/expense_claim.js",
 }
 
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}

@@ -14,4 +14,4 @@ def get_activities_by_task(doctype, txt, searchfield, start, page_len, filters):
 	if not filters:
 		return []
 	task = frappe.get_doc("Task", filters["task"])
-	return [(x.task_activity) for x in task.activities]
+	return [(x.task_activity, ) for x in task.activities]
