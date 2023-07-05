@@ -1,0 +1,34 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-05 12:29:04.173548",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "label": "Note"
+  }
+ ],
+ "links": [],
+ "modified": "2023-07-05 12:56:39.547478",
+ "modified_by": "Administrator",
+ "module": "HWF",
+ "name": "Employee Leave View",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

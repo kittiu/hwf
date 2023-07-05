@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestAllEmployeeLeaves(FrappeTestCase):
+class TestEmployeeLeaveView(FrappeTestCase):
 	pass
