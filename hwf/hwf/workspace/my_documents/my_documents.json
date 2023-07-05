@@ -101,9 +101,19 @@
   },
   {
    "hidden": 0,
+   "is_query_report": 1,
+   "label": "Deaily Timesheet Summary",
+   "link_count": 0,
+   "link_to": "Daily Timesheet Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
    "is_query_report": 0,
    "label": "Reports",
-   "link_count": 2,
+   "link_count": 4,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -136,9 +146,19 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "HWF Daily Timesheet Summary",
+   "link_count": 0,
+   "link_to": "HWF Daily Timesheet Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-07-05 13:10:15.033300",
+ "modified": "2023-07-05 13:41:16.545478",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "My Documents",
