@@ -45,7 +45,11 @@ fixtures = [
                     "Expense Claim-task-hidden",
                     "Purchase Invoice-project-hidden",
                     "Purchase Order-project-hidden",
-                    "Employee Advance-advance_amount-read_only"
+                    "Employee Advance-advance_amount-read_only",
+                    "Material Request Item-accounting_dimensions_section-collapsible",
+                    "Supplier Quotation Item-ad_sec_break-collapsible",
+                    "Purchase Order Item-accounting_dimensions_section-collapsible",
+                    "Purchase Invoice Item-accounting_dimensions_section-collapsible",
 				),
 			]
 		],
