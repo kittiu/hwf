@@ -17,8 +17,35 @@ fixtures = [
 				"in",
 				(
 					"Task-activities",
-                    "Purchase Order-employee",
-                    "Task-activities",
+                    "Purchase Order-requester",
+                    "Purchase Order-requester_name",
+                    "Supplier Quotation Item-donor",
+                    "Supplier Quotation Item-task_activity",
+                    "Supplier Quotation Item-column_break_fo4xe",
+                    "Supplier Quotation Item-task",
+                    "Employee Advance-section_break_bigan",
+                    "Employee Advance-items",
+				),
+			]
+		],
+	},
+	{
+		"doctype": "Property Setter",
+		"filters": [
+			[
+				"name",
+				"in",
+				(
+					"Supplier Quotation Item-project-reqd",
+                    "Material Request Item-project-reqd",
+                    "Expense Claim Detail-project-reqd",
+                    "Purchase Invoice Item-project-reqd",
+                    "Purchase Order Item-project-reqd",
+                    "Expense Claim-project-hidden",
+                    "Expense Claim-task-hidden",
+                    "Purchase Invoice-project-hidden",
+                    "Purchase Order-project-hidden",
+                    "Employee Advance-advance_amount-read_only"
 				),
 			]
 		],
@@ -55,6 +82,7 @@ doctype_js = {
 	"Supplier Quotation": "public/js/supplier_quotation.js",
 	"Purchase Invoice": "public/js/purchase_invoice.js",
 	"Expense Claim": "public/js/expense_claim.js",
+    "Employee Advance": "public/js/employee_advance.js",
 }
 
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -132,13 +160,11 @@ calendars = ["Employee Leave View"]
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Employee Advance": {
+		"validate": "hwf.hwf.doctype.employee_advance_item.employee_advance_item.sum_total",
+	},
+}
 
 # Scheduled Tasks
 # ---------------

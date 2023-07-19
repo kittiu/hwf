@@ -3,14 +3,19 @@ frappe.provide('erpnext.accounts');
 
 frappe.ui.form.on(cur_frm.doctype, {
 	onload(frm) {
-        frm.set_query("project", "items", function() {
+		let table_field = "items";
+		if (cur_frm.doctype == "Expense Claim") {
+			table_field = "expenses"
+		}
+        frm.set_query("project", table_field, function() {
 			return {
                 filters: {
-                    is_active: "Yes"
+                    is_active: "Yes",
+					status: "Open",
                 }
 			}
 		});
-        frm.set_query("task", "items", function(doc, cdt, cdn) {
+        frm.set_query("task", table_field, function(doc, cdt, cdn) {
 			const row = locals[cdt][cdn];
 			return {
                 filters: {
@@ -18,7 +23,7 @@ frappe.ui.form.on(cur_frm.doctype, {
                 }
 			}
 		});
-        frm.set_query("task_activity", "items", function(doc, cdt, cdn) {
+        frm.set_query("task_activity", table_field, function(doc, cdt, cdn) {
 			const row = locals[cdt][cdn];
 			return {
 				query: "hwf.hwf.doctype.task_activities.task_activities.get_activities_by_task",
@@ -29,6 +34,17 @@ frappe.ui.form.on(cur_frm.doctype, {
 });
 
 frappe.ui.form.on(cur_frm.doctype + ' Item', {
+    project(frm, cdt, cdn) {
+		let row = locals[cdt][cdn];
+        frappe.model.set_value(cdt, cdn, "task", "")
+    },
+    task(frm, cdt, cdn) {
+		let row = locals[cdt][cdn];
+        frappe.model.set_value(cdt, cdn, "task_activity", "")
+    },
+});
+
+frappe.ui.form.on('Expense Claim Detail', {
     project(frm, cdt, cdn) {
 		let row = locals[cdt][cdn];
         frappe.model.set_value(cdt, cdn, "task", "")
