@@ -39,11 +39,12 @@ fixtures = [
                     "Purchase Invoice Item-donor",
                     "Purchase Invoice Item-task",
                     "Purchase Invoice Item-task_activity",
-					# Purchase Order
+					# Others
                     "Purchase Order-requester",
                     "Purchase Order-requester_name",
                     "Employee Advance-section_break_bigan",
                     "Employee Advance-items",
+                    "Material Request-requester",
 				),
 			]
 		],
