@@ -76,6 +76,7 @@ fixtures = [
                     "Supplier Quotation Item-ad_sec_break-collapsible",
                     "Purchase Order Item-accounting_dimensions_section-collapsible",
                     "Purchase Invoice Item-accounting_dimensions_section-collapsible",
+                    "Payment Entry-cost_center-hidden",
 				),
 			]
 		],
