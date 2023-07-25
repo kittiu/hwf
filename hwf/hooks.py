@@ -16,28 +16,27 @@ fixtures = [
 				"name",
 				"in",
 				(
-					"Task-activities",
                     # Expense Claim Detail
                     "Expense Claim Detail-donor",
                     "Expense Claim Detail-column_break_bqsg1",
-                    "Expense Claim Detail-task",
+                    "Expense Claim Detail-project_line",
                     "Expense Claim Detail-task_activity",
                     # Material Request Item
                     "Material Request Item-donor",
-                    "Material Request Item-task",
+                    "Material Request Item-project_line",
                     "Material Request Item-task_activity",
                     # Supplier Quotation Item
                     "Supplier Quotation Item-donor",
                     "Supplier Quotation Item-column_break_fo4xe",
-                    "Supplier Quotation Item-task",
+                    "Supplier Quotation Item-project_line",
                     "Supplier Quotation Item-task_activity",
 					# Purchase Order Item
                     "Purchase Order Item-donor",
-                    "Purchase Order Item-task",
+                    "Purchase Order Item-project_line",
                     "Purchase Order Item-task_activity",
                     # Purchase Invoice Item
                     "Purchase Invoice Item-donor",
-                    "Purchase Invoice Item-task",
+                    "Purchase Invoice Item-project_line",
                     "Purchase Invoice Item-task_activity",
 					# Others
                     "Purchase Order-requester",

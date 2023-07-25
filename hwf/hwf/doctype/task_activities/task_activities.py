@@ -10,8 +10,8 @@ class TaskActivities(Document):
 
 @frappe.whitelist()
 @frappe.validate_and_sanitize_search_inputs
-def get_activities_by_task(doctype, txt, searchfield, start, page_len, filters):
+def get_activities_by_project_line(doctype, txt, searchfield, start, page_len, filters):
 	if not filters:
 		return []
-	task = frappe.get_doc("Task", filters["task"])
-	return [(x.task_activity, ) for x in task.activities]
+	project_line = frappe.get_doc("Project Line", filters["project_line"])
+	return [(x.task_activity, ) for x in project_line.activities]

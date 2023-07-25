@@ -18,20 +18,20 @@ frappe.ui.form.on(cur_frm.doctype, {
                 }
 			}
 		});
-        frm.set_query("task", table_field, function(doc, cdt, cdn) {
+        frm.set_query("project_line", table_field, function(doc, cdt, cdn) {
 			const row = locals[cdt][cdn];
 			return {
                 filters: {
                     project: row.project ? row.project : "False",
-					status: ["!=", "Cancelled"]
+					disabled: 0
                 }
 			}
 		});
         frm.set_query("task_activity", table_field, function(doc, cdt, cdn) {
 			const row = locals[cdt][cdn];
 			return {
-				query: "hwf.hwf.doctype.task_activities.task_activities.get_activities_by_task",
-				filters: { "task": row.task }
+				query: "hwf.hwf.doctype.task_activities.task_activities.get_activities_by_project_line",
+				filters: { "project_line": row.project_line }
 			}
 		});
 	},
@@ -40,7 +40,7 @@ frappe.ui.form.on(cur_frm.doctype, {
 frappe.ui.form.on(cur_frm.doctype + ' Item', {
     project(frm, cdt, cdn) {
 		let row = locals[cdt][cdn];
-        frappe.model.set_value(cdt, cdn, "task", "")
+        frappe.model.set_value(cdt, cdn, "project_line", "")
     },
     task(frm, cdt, cdn) {
 		let row = locals[cdt][cdn];
@@ -51,7 +51,7 @@ frappe.ui.form.on(cur_frm.doctype + ' Item', {
 frappe.ui.form.on('Expense Claim Detail', {
     project(frm, cdt, cdn) {
 		let row = locals[cdt][cdn];
-        frappe.model.set_value(cdt, cdn, "task", "")
+        frappe.model.set_value(cdt, cdn, "project_line", "")
     },
     task(frm, cdt, cdn) {
 		let row = locals[cdt][cdn];

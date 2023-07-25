@@ -1,3 +1,5 @@
+{% include "hwf/public/js/overrides/dimension_tree_filter.js" %}
+
 frappe.ui.form.on('Employee Advance',  {
     validate: function(frm) {
         var total = 0;
