@@ -115,6 +115,7 @@ doctype_js = {
 	"Purchase Invoice": "public/js/purchase_invoice.js",
 	"Expense Claim": "public/js/expense_claim.js",
     "Employee Advance": "public/js/employee_advance.js",
+    "Timesheet": "public/js/timesheet.js",
 }
 
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}

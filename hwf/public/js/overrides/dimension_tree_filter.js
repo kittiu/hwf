@@ -7,6 +7,9 @@ frappe.ui.form.on(cur_frm.doctype, {
 		if (cur_frm.doctype == "Expense Claim") {
 			table_field = "expenses"
 		}
+		if (cur_frm.doctype == "Timesheet") {
+			table_field = "time_logs"
+		}
         frm.set_query("project", table_field, function() {
 			return {
                 filters: {
@@ -19,7 +22,8 @@ frappe.ui.form.on(cur_frm.doctype, {
 			const row = locals[cdt][cdn];
 			return {
                 filters: {
-                    project: row.project ? row.project : "False"
+                    project: row.project ? row.project : "False",
+					status: ["!=", "Cancelled"]
                 }
 			}
 		});
