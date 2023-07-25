@@ -8,7 +8,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "activity_name"
+  "activity_name",
+  "disabled"
  ],
  "fields": [
   {
@@ -16,11 +17,17 @@
    "fieldtype": "Data",
    "label": "Activity Name",
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-01 15:33:18.806261",
+ "modified": "2023-07-25 16:29:26.447005",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "Task Activity",

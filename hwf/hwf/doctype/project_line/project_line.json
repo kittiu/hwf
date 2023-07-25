@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:{project_line_name} - {project}",
  "creation": "2023-07-25 13:46:00.907187",
  "default_view": "List",
@@ -57,7 +58,7 @@
   }
  ],
  "links": [],
- "modified": "2023-07-25 14:42:33.931634",
+ "modified": "2023-07-25 17:04:30.658220",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "Project Line",
