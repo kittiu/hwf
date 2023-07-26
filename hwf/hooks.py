@@ -8,6 +8,14 @@ app_email = "kittiu@gmail.com"
 app_license = "MIT"
 required_apps = ["erpnext", "hrms"]
 
+# monkey patch
+import hrms.hr.doctype.expense_claim.expense_claim
+import hwf.overrides.expense_claim
+
+hrms.hr.doctype.expense_claim.expense_claim.get_expense_claim = (
+	hwf.overrides.expense_claim.get_expense_claim
+)
+
 fixtures = [
 	{
 		"doctype": "Custom Field",
@@ -77,6 +85,10 @@ fixtures = [
                     "Purchase Order Item-accounting_dimensions_section-collapsible",
                     "Purchase Invoice Item-accounting_dimensions_section-collapsible",
                     "Payment Entry-cost_center-hidden",
+                    # Payment entry, required cheque reference
+                    "Payment Entry-reference_date-mandatory_depends_on",
+                    "Payment Entry-reference_no-mandatory_depends_on",
+                    # --
 				),
 			]
 		],
