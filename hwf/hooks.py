@@ -53,6 +53,7 @@ fixtures = [
                     "Employee Advance-items",
                     "Material Request-requester",
                     "Employee Advance-required_date",
+                    "Payment Entry-party_bank_account_number",
 				),
 			]
 		],
