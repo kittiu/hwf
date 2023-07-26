@@ -123,8 +123,7 @@
    "fieldname": "task_activity",
    "fieldtype": "Link",
    "label": "Task Activity",
-   "options": "Task Activity",
-   "reqd": 1
+   "options": "Task Activity"
   },
   {
    "bold": 1,
@@ -158,7 +157,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-26 09:21:57.968081",
+ "modified": "2023-07-26 14:00:27.439040",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "Employee Advance Item",
