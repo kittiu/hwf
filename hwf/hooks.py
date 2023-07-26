@@ -52,6 +52,7 @@ fixtures = [
                     "Employee Advance-section_break_bigan",
                     "Employee Advance-items",
                     "Material Request-requester",
+                    "Employee Advance-required_date",
 				),
 			]
 		],
@@ -89,6 +90,7 @@ fixtures = [
                     "Payment Entry-reference_date-mandatory_depends_on",
                     "Payment Entry-reference_no-mandatory_depends_on",
                     # --
+                    "Employee Advance-mode_of_payment-hidden",
 				),
 			]
 		],
