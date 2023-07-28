@@ -55,6 +55,7 @@ fixtures = [
                     "Employee Advance-required_date",
                     "Payment Entry-party_bank_account_number",
                     "Expense Claim Detail-attachment",
+                    "Material Request-total_amount",
 				),
 			]
 		],
@@ -211,6 +212,9 @@ calendars = ["Employee Leave View"]
 doc_events = {
 	"Employee Advance": {
 		"validate": "hwf.hwf.doctype.employee_advance_item.employee_advance_item.sum_total",
+    },
+	"Material Request": {
+		"validate": "hwf.overrides.material_request.sum_total",
 	},
 }
 
