@@ -42,7 +42,7 @@ frappe.ui.form.on(cur_frm.doctype + ' Item', {
 		let row = locals[cdt][cdn];
         frappe.model.set_value(cdt, cdn, "project_line", "")
     },
-    task(frm, cdt, cdn) {
+    project_line(frm, cdt, cdn) {
 		let row = locals[cdt][cdn];
         frappe.model.set_value(cdt, cdn, "task_activity", "")
     },
@@ -53,7 +53,7 @@ frappe.ui.form.on('Expense Claim Detail', {
 		let row = locals[cdt][cdn];
         frappe.model.set_value(cdt, cdn, "project_line", "")
     },
-    task(frm, cdt, cdn) {
+    project_line(frm, cdt, cdn) {
 		let row = locals[cdt][cdn];
         frappe.model.set_value(cdt, cdn, "task_activity", "")
     },
