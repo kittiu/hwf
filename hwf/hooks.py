@@ -56,6 +56,9 @@ fixtures = [
                     "Payment Entry-party_bank_account_number",
                     "Expense Claim Detail-attachment",
                     "Material Request-total_amount",
+                    # HWF Activity Request
+                    "Purchase Invoice-custom_hwf_activity_request",
+                    "Employee Advance-custom_hwf_activity_request",
 				),
 			]
 		],
