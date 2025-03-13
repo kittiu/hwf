@@ -11,6 +11,7 @@
   "employee_name",
   "expense_approver",
   "request_date",
+  "ready_for_review",
   "column_break_qsim",
   "company",
   "project_type",
@@ -190,6 +191,13 @@
    "fieldtype": "Link",
    "label": "Expense Approver",
    "options": "User"
+  },
+  {
+   "default": "0",
+   "description": "Check this when ready for Expense Approver",
+   "fieldname": "ready_for_review",
+   "fieldtype": "Check",
+   "label": "Ready For Review"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -204,7 +212,7 @@
    "link_fieldname": "custom_hwf_activity_request"
   }
  ],
- "modified": "2025-03-13 12:13:54.727188",
+ "modified": "2025-03-13 14:52:59.253051",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "HWF Activity Request",
