@@ -187,6 +187,7 @@
   },
   {
    "fetch_from": "employee.expense_approver",
+   "fetch_if_empty": 1,
    "fieldname": "expense_approver",
    "fieldtype": "Link",
    "label": "Expense Approver",
@@ -212,7 +213,7 @@
    "link_fieldname": "custom_hwf_activity_request"
   }
  ],
- "modified": "2025-03-13 14:52:59.253051",
+ "modified": "2025-03-13 15:20:02.109712",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "HWF Activity Request",

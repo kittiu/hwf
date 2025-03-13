@@ -27,8 +27,12 @@ class HWFActivityRequest(Document):
 		self.total_amount = adv_amount + pi_amount
 
 	def submit(self):
+		# Check there are lines
 		if not self.purchase_invoices and not self.employee_advances:
 			frappe.throw(_("Please add at least one item to the activity request"))
+		# Check valid approver
+		if self.expense_approver != frappe.session.user:
+			frappe.throw(_("Only Expense Approver can submit this document"))
 		self.create_purchase_invoices()
 		self.create_employee_advances()
 		super().submit()
