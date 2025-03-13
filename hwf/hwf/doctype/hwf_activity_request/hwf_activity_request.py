@@ -35,6 +35,8 @@ class HWFActivityRequest(Document):
 
 	def create_purchase_invoices(self):
 		""" Create a purchase invoice for each item in activity request """
+		if not self.purchase_invoices:
+			return
 		# Create a purchase invoice for each item in activity request
 		for item in self.purchase_invoices:
 			# Create a purchase invoice
@@ -66,6 +68,8 @@ class HWFActivityRequest(Document):
 
 	def create_employee_advances(self):
 		""" Create an employee advance for each item in activity request """
+		if not self.employee_advances:
+			return
 		# Create an employee advance for each item in activity request
 		adv = frappe.new_doc("Employee Advance")
 		adv.employee = self.employee
