@@ -66,9 +66,8 @@ class HWFActivityRequest(Document):
 					"task_activity": item.task_activity,
 				}
 			)
-			pi.insert()
-			# Update the item with the purchase invoice number
-			item.purchase_invoice = pi.name
+			pi.insert(ignore_permissions=True)
+			pi.submit()
 
 	def create_employee_advances(self):
 		""" Create an employee advance for each item in activity request """
@@ -83,7 +82,7 @@ class HWFActivityRequest(Document):
 		adv.company = self.company
 		adv.exchange_rate = 1
 		adv.custom_hwf_activity_request = self.name
-		adv.insert()
+		adv.insert(ignore_permissions=True)
 		for item in self.employee_advances:
 			# Create an employee advance
 			adv.append(
@@ -100,10 +99,27 @@ class HWFActivityRequest(Document):
 					"donor": item.donor,
 				}
 			)
-			# Update the item with the employee advance number
-			item.employee_advance = adv.name
-		adv.save()
+		adv.save(ignore_permissions=True)
+		adv.submit()
   
+	def cancel(self):
+		self.cancel_purchase_invoices()
+		self.cancel_employee_advances()
+		super().cancel()
+  
+	def cancel_purchase_invoices(self):
+		""" Cancel the purchase invoices created for the activity request """
+		for item in self.purchase_invoices:
+			if item.purchase_invoice:
+				pi = frappe.get_doc("Purchase Invoice", item.purchase_invoice)
+				pi.cancel()
+    
+	def cancel_employee_advances(self):
+		""" Cancel the employee advances created for the activity request """
+		for item in self.employee_advances:
+			if item.employee_advance:
+				adv = frappe.get_doc("Employee Advance", item.employee_advance)
+				adv.cancel()
   
   
   

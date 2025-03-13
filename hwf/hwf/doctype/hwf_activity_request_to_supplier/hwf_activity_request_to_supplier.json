@@ -17,9 +17,7 @@
   "project_line",
   "task_activity",
   "donor",
-  "description",
-  "references_section",
-  "purchase_invoice"
+  "description"
  ],
  "fields": [
   {
@@ -80,18 +78,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "references_section",
-   "fieldtype": "Section Break",
-   "label": "References"
-  },
-  {
-   "fieldname": "purchase_invoice",
-   "fieldtype": "Link",
-   "label": "Purchase Invoice",
-   "options": "Purchase Invoice",
-   "read_only": 1
-  },
-  {
    "columns": 1,
    "default": "Today",
    "fieldname": "date",
@@ -126,7 +112,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-13 11:38:23.431639",
+ "modified": "2025-03-13 17:16:19.632976",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "HWF Activity Request To Supplier",

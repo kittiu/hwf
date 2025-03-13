@@ -263,7 +263,7 @@ doc_events = {
 
 # exempt linked doctypes from being automatically cancelled
 #
-# auto_cancel_exempted_doctypes = ["Auto Repeat"]
+# auto_cancel_exempted_doctypes = ["Employee Advance", "Purchase Invoice"]
 
 # Ignore links to specified DocTypes when deleting documents
 # -----------------------------------------------------------

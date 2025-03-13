@@ -15,9 +15,7 @@
   "project_line",
   "task_activity",
   "donor",
-  "description",
-  "references_section",
-  "employee_advance"
+  "description"
  ],
  "fields": [
   {
@@ -52,18 +50,6 @@
    "label": "Task Activity",
    "options": "Task Activity",
    "reqd": 1
-  },
-  {
-   "fieldname": "references_section",
-   "fieldtype": "Section Break",
-   "label": "References"
-  },
-  {
-   "fieldname": "employee_advance",
-   "fieldtype": "Link",
-   "label": "Employee Advance",
-   "options": "Employee Advance",
-   "read_only": 1
   },
   {
    "fieldname": "uom",
@@ -106,7 +92,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-13 11:38:32.206487",
+ "modified": "2025-03-13 17:15:59.378269",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "HWF Activity Request To Employee",
