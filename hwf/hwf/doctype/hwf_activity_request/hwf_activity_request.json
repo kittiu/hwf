@@ -9,6 +9,7 @@
   "naming_series",
   "employee",
   "employee_name",
+  "expense_approver",
   "request_date",
   "column_break_qsim",
   "company",
@@ -182,6 +183,13 @@
   {
    "fieldname": "column_break_fbuv",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.expense_approver",
+   "fieldname": "expense_approver",
+   "fieldtype": "Link",
+   "label": "Expense Approver",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -196,7 +204,7 @@
    "link_fieldname": "custom_hwf_activity_request"
   }
  ],
- "modified": "2025-03-13 11:08:41.361623",
+ "modified": "2025-03-13 12:13:54.727188",
  "modified_by": "Administrator",
  "module": "HWF",
  "name": "HWF Activity Request",
